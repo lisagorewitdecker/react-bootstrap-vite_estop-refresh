@@ -1,57 +1,49 @@
 
 import React from 'react';
 import {Container} from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import '../types';
+import {Link} from 'react-router-dom';
+import {ScheduleIframe} from '../components/ScheduleIframe';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
-const Schedule: React.FC = () => {
+export const Schedule: React.FC = () => {
     return (
-        <div className="bg-white">
-            <div className="bg-light">
-                <div className="container py-5">
-                    <h1 className="display-3 fw-bold mb-3">
-                       <span className="text-danger">
-                        SCHEDULE LESSON/S</span>AT ESTOP DRIVING SCHOOL.</h1>
-                    <p className="lead text-muted max-w-2xl">
-                        Please Take a Moment to Look at Our Google Schedule Below! You Can Conveniently Book One or All
-                        of Your Driving Lesson/s Today!
+        <>
+            <div className="bg-light text-dark">
+                <Container className="py-5">
+                    <h1 className="display-4 fw-bold mb-3 text-uppercase">
+                        <span className="text-danger">Schedule Lesson/s</span> <span className="text-dark"> at eStop Driving School</span>
+                    </h1>
+                    <p className="lead text-muted mb-0" style={{ width: '700px', maxWidth:'100%'}}>
+                        Please take a moment to look at our Google Calendar appointment scheduler below.
+                        You can conveniently book one or all of your driving lessons online today!
                     </p>
-                </div>
+                </Container>
             </div>
-            <Container className="my-5">
-                <div className="text-center row">
-                    <div className="my-5 container">
-                        <h2
-                            className="dtext-3xl font-bold text-red-600 mb-4 text-left" style={{textAlign: 'left'}}>
-                            BOOK YOUR DRIVING LESSON/S
-                            WITH ESTOP DRIVING SCHOOL TODAY
-                        </h2>
+            <div className="bg-white text-dark">
+                <Container className="py-5">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-10 col-xl-9">
 
-                        <iframe
-                            className="iframe"
-                            src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2ZCzKMpxsDgy3QIYZTfsvvJUdvRk-jvBV0w8lJruHsQC7XKkoXjSkAI2Tti5absT-wnaXc05Zy"
-                            title="The Best Driving School in Marin and Sonoma Counties - eStop Driving School in Marin County and Sonoma County"
-                            allow="calendar">
-                        </iframe>
-                        <p><br/></p>
-                        <Button
-                            type="submit"
-                            className="btn btn-danger btn-lg fw-bold"
-                            style={{textAlign: 'center'}}
-                            onClick={() => window.location.href = '/contact'}>
-                            QUESTIONS?<br/>
-                            CONTACT US!
-                        </Button>
-                        <p><br/></p>
+                            <h2 className="h3 fw-bold text-danger text-uppercase mb-4 text-start">
+                                Book Your Behind-The-Wheel Training
+                            </h2>
+                            <ScheduleIframe />
+                            <div className="text-center py-3">
+                                <h4 className="fw-bold mb-3 text-uppercase">Have Questions Before Booking?</h4>
+                                <p className="text-muted mb-4">
+                                    If you need alternative accommodations or have custom request needs, feel free to reach out.
+                                </p>
+                                <Link to="/contact"
+                                      className="px-5 py-3 rounded-pill fw-bold text-uppercase border-0 shadow text-white btn btn-danger"
+                                      style={{backgroundColor: '#222d3b'}}>
+                                    Contact Support
+                                </Link>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
-            </Container>
-        </div>
+                </Container>
+            </div>
+        </>
     );
 };
+
 export default Schedule;

@@ -1,94 +1,101 @@
-//BlogPage.tsx//
-import React from 'react';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import {
     Container,
     Row,
-    Col,
-    Button,
-    Card
+    Col
 } from 'react-bootstrap';
-import { BlogPost } from '../types/index';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
-const posts: BlogPost[] = [
-    { id: 1, title: "How to Pass Your DMV Test", excerpt: "Tips and tricks from 40 years of instructing...", date: "Oct 12, 2023", slug: "how-to-pass-your-dmv-test" },
-    { id: 2, title: "Teen Driving Safety", excerpt: "What parents need to know about the first 6 months...", date: "Sept 28, 2023", slug: "teen-driving-safety" },
-    { id: 3, title: "How to Pass Your DMV Test", excerpt: "Tips and tricks from 40 years of instructing...", date: "Oct 12, 2023", slug: "how-to-pass-your-dmv-test" },
-    { id: 4, title: "Teen Driving Safety", excerpt: "What parents need to know about the first 6 months...", date: "Sept 28, 2023", slug: "teen-driving-safety" },
-
-];
+import BlogPost from '../types/blog';
+import {blogPosts} from "../data/blogData";
+// import {blogPosts} from '../data/blogData';
 
 const BlogPage: React.FC = () => {
+    const [selectedCategory, setSelectedCategory] = useState<string>('All');
+    const categories: string[] = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+    const featuredPost: BlogPost | undefined = blogPosts.find(post => post.isFeatured);
+    const filteredPosts: BlogPost[] = selectedCategory === 'All'
+        ? blogPosts
+        : blogPosts.filter(post => post.category === selectedCategory);
     return (
-        <div className="bg-white">
-            <div className="bg-light">
-                <div className="container py-5">
-                    <h1 className="display-3 fw-bold mb-3">
-                        <span className="text-danger">OUR BLOG</span> ESTOP DRIVING SCHOOL.</h1>
-                    <p className="lead text-muted max-w-2xl">
-                        Catch the latest driving tips and news from ESTOP Driving School, your trusted source for safe and confident driving.
-                    </p>
-                </div>
-            </div>
-            <Container className="my-5">
-                <h2 className="text-3xl font-bold text-red-600 mb-4">BLOG: DRIVING TIPS & NEWS</h2>
-                <Row>
-                    {posts.map(post => (
-                        <Col md={6} lg={4} key={post.id} className="mb-4">
-                            <Card className="blog-light h-100 shadow-sm">
-                                <Card.Body>
-                                    <Card.Subtitle className="mb-2 text-muted">{post.date}</Card.Subtitle>
-                                    <Card.Title>{post.title}</Card.Title>
-                                    <Card.Text>{post.excerpt}</Card.Text>
-                                    <Button
-                                        variant="link"
-                                        className="p-0"
-                                        href={`/blog/${post.slug}`}
-                                    >
-                                        {'Read More →'}
-                                    </Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-                <Card className="border-0 shadow-lg mb-5 bg-dark text-white overflow-hidden">
-                    <Row className="g-0 align-items-center">
-                        <Col md={6} className="p-5">
-                            <span className="badge bg-warning text-dark mb-3">MUST READ</span>
-                            <h2 className="text-3xl font-bold text-red-600 mb-4">The Ultimate 2026 Guide to Passing Your Road Test</h2>
-                            <p className="lead opacity-75">
-                                We've Compiled The Top 10 Reasons Students Fail and How You Can Avoid Them.
-                                Read Our Expert Breakdown Before Your Big Day.
-                            </p>
-                            <Button
-                                href="/blog/featured"
-                                variant="light"
-                                className="fw-bold px-4 py-2 mt-3"
-                            >
-                                { 'Read the Full Guide' }
-                            </Button>
-                        </Col>
-                        <Col md={6} className="d-none d-md-block">
-                            <h3>RECEIVE 30,000 PLUS DAYS OF MY EXPERT DRIVING EXPERIENCE IN JUST SIX HOURS!
-                                <button
-                                    className="btn btn-danger"
-                                >BOOK NOW</button></h3>
-                            <div style={{
-                                backgroundColor: '#333',
-                                height: '100%',
-                                minHeight: '400px',
-                                backgroundImage: 'url("https://via.placeholder.com/800x600")',
-                                backgroundSize: 'cover'
-                            }}></div>
+        <main className="min-vh-100 bg-white">
+            <div className="bg-light text-dark py-5 mb-5 w-100 border-bottom">
+                <Container>
+                    <Row className="justify-content-center text-center">
+                        <Col lg={10}>
+                            <header>
+                                <h1 className="display-4 fw-bold text-uppercase mb-3">
+                                    <span className="text-danger">eStop Driving School</span> <span className="text-dark">Blog</span>
+                                </h1>
+                                <p className="text-muted lead mb-0">
+                                    Tips, guides, and resources for behind-the-wheel success
+                                </p>
+                            </header>
                         </Col>
                     </Row>
-                </Card>
+                </Container>
+            </div>
+            <Container className="pb-5">
+                <Row className="justify-content-center">
+                    <Col lg={10}>
+                        {featuredPost && selectedCategory === 'All' && (
+                            <div className="card mb-5 border-0 shadow-sm overflow-hidden bg-light">
+                                <div className="row g-0">
+                                    <div className="col-md-6">
+                                        <img
+                                            src={featuredPost.image}
+                                            style={{ maxWidth: '600px', width: '100%', height: '400px', objectFit: 'cover' }}
+                                            alt={featuredPost.title}
+                                        />
+                                    </div>
+                                    <div className="col-md-6 d-flex align-items-center">
+                                        <div className="card-body p-4">
+                                            <span className="badge bg-danger mb-2">Featured — {featuredPost.category}</span>
+                                            <h2 className="card-title fw-bold">{featuredPost.title}</h2>
+                                            <p className="card-text text-muted">{featuredPost.summary}</p>
+                                            <p className="card-text"><small className="text-muted">{featuredPost.date}</small></p>
+                                            <Link to={`/blog/${featuredPost.id}`} className="btn btn-danger fw-bold text-white px-4">Read Full Article</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        <div className="d-flex flex-wrap gap-2 justify-content-center mb-5">
+                            {categories.map(category => (
+                                <button
+                                    key={category}
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={`btn btn-sm px-4 rounded-pill ${selectedCategory === category ? 'btn-dark' : 'btn-outline-secondary'}`}
+                                >
+                                    {category}
+                                </button>
+                            ))}
+                        </div>
+                        <h3 className="mb-4 fw-semibold text-uppercase tracking-wide">
+                            {selectedCategory} <span className="text-danger">Articles</span>
+                        </h3>
+                        <div className="row g-4">
+                            {filteredPosts.map((post: BlogPost) => (
+                                <div key={post.id} className="col-md-6 col-lg-4">
+                                    <div className="card h-100 shadow-sm border-0">
+                                        <img src={post.image} className="card-img-top" alt={post.title} style={{ height: '200px', objectFit: 'cover' }} />
+                                        <div className="card-body d-flex flex-column">
+                                            <span className="badge bg-secondary align-self-start mb-2">{post.category}</span>
+                                            <h5 className="card-title fw-bold">{post.title}</h5>
+                                            <p className="card-text text-muted flex-grow-1">{post.summary}</p>
+                                            <div className="d-flex justify-content-between align-items-center mt-3">
+                                                <small className="text-muted">{post.date}</small>
+                                                <Link to={`/blog/${post.id}`} className="btn btn-sm btn-outline-danger fw-bold">Read More</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </Col>
+                </Row>
             </Container>
-        </div>
-
+        </main>
     );
 };
+
 export default BlogPage;

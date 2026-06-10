@@ -1,7 +1,6 @@
-//Contact.tsx
-import React, { FC, useState, ChangeEvent, SubmitEvent } from 'react';
-import { Container } from 'react-bootstrap';
-import { ContactState } from "../types/index";
+import React, {ChangeEvent, FC, FormEvent, useState} from 'react';
+import {Container} from 'react-bootstrap';
+import ContactState from "../types";
 
 const Contact: FC = () => {
     const [formData, setFormData] = useState<ContactState>({
@@ -31,7 +30,7 @@ const Contact: FC = () => {
         const {id, value} = e.target;
         setFormData(prev => ({...prev, [id]: value}));
     };
-    const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (validate()) {
             setIsSent(true);
@@ -39,20 +38,20 @@ const Contact: FC = () => {
         }
     };
     return (
-            <div className="bg-white">
-                <div className="bg-light">
-                    <div className="container py-5">
-                        <h1 className="display-3 fw-bold mb-3">
+        <div className="bg-white">
+            <div className="bg-light">
+                <div className="container py-5">
+                    <h1 className="display-3 fw-bold mb-3">
                        <span className="text-danger">
-                        CONTACT US</span>ESTOP DRIVING SCHOOL.</h1>
-                        <p className="lead text-muted max-w-2xl">
-                            Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam. Sed
-                            euismod, nisl eget aliquam ultricies, nunc nisl aliquet nisl, eget aliquam nisl nisl eget
-                            nisl.
-                        </p>
-                        </div>
+                        CONTACT US</span> ESTOP DRIVING SCHOOL.</h1>
+                    <p className="lead text-muted max-w-2xl">
+                        Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget aliquam. Sed
+                        euismod, nisl eget aliquam ultricies, nunc nisl aliquet nisl, eget aliquam nisl nisl eget
+                        nisl.
+                    </p>
                 </div>
-                <Container className="my-5">
+            </div>
+            <Container className="my-5">
                 <div className="align-items-start">
 
                     <div className="row g-5">
@@ -88,7 +87,7 @@ const Contact: FC = () => {
                                         className="x-small text-secondary mb-0">Tony will get back to you shortly.</p>
                                     <button
                                         className="btn btn-outline-danger mt-3"
-                                            onClick={() => setIsSent(false)}>
+                                        onClick={() => setIsSent(false)}>
                                         Send Another
                                     </button>
                                 </div>
@@ -139,12 +138,13 @@ const Contact: FC = () => {
                                         Send Request
                                     </button>
                                 </form>
-                            )};
+                            )
+                            }
                         </div>
                     </div>
                 </div>
             </Container>
-         </div>
+        </div>
     );
 
 };
