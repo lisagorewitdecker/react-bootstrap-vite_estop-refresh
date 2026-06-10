@@ -1,7 +1,6 @@
-// Footer.tsx
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Col, Container, Row} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -15,11 +14,13 @@ const Footer = () => {
                             </Link>
                         </h5>
                         <p className="text-white-50">
-                            Providing Top-Tier Driver Education For Over 43+ Years.<wbr/> Safe Roads Start With Professional Training.
+                            Providing Top-Tier Driver Education For Over 43+ Years.
+                            <wbr/>
+                            Safe Roads Start With Professional Training.
                         </p>
                     </Col>
-                    <Col lg={2} md={4}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.2em'}}>QUICK LINKS</h6>
+                    <Col lg={2}>
+                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>QUICK LINKS</h6>
                         <ul className="list-unstyled d-flex flex-column gap-2">
                             <li>
                                 <Link to="/privacy-policy" className="text-white text-decoration-none">
@@ -38,17 +39,24 @@ const Footer = () => {
                             </li>
                         </ul>
                     </Col>
-                    <Col lg={3} md={4}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.2em'}}>CONTACT US</h6>
+                    <Col lg={4}>
+                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>CONTACT US</h6>
                         <ul className="list-unstyled text-white d-flex flex-column gap-2">
                             <li><i className="bi bi-geo-alt me-2 text-white"></i>SUITE N, 7075 REDWOOD BLVD.</li>
                             <li>NOVATO, CA 94945</li>
-                            <li><i className="bi bi-envelope me-2 text-danger"></i><Link to="mailto:tony@estopdrivingschool.com" target="_blank" className="text-white text-decoration-none">TONY@ESTOPDRIVINGSCHOOL.COM</Link>
+                            <li><i
+                                className="bi bi-envelope me-2 text-danger"
+                            ></i><a
+                                href="mailto:tony@estopdrivingschool.com"
+                                className="text-white text-decoration-none"
+                            >
+                                TONY@ESTOPDRIVINGSCHOOL.COM
+                            </a>
                             </li>
                         </ul>
                     </Col>
-                    <Col lg={3} md={4}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.2em'}}>HOURS</h6>
+                    <Col lg={2}>
+                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>HOURS</h6>
                         <ul className="list-unstyled text-white d-flex flex-column gap-1">
                             <li>MONDAY — SATURDAY:</li>
                             <li>8:00 AM — 7:00 PM</li>
@@ -56,9 +64,9 @@ const Footer = () => {
                         </ul>
                     </Col>
                 </Row>
-                <hr className="my-4 border-secondary opacity-25" />
+                <hr className="my-4 border-secondary opacity-25"/>
                 <div className="d-flex align-items-center flex-column text-white small">
-                    <p className="mb-0">© {new Date().getFullYear()} e-Stop Driving School. All rights reserved. Full-Stack Developer — Lisa Gorewit-Decker</p>
+                    <p className="mb-0">© {new Date().getFullYear()} e-Stop Driving School. All rights reserved. Full-Stack Developer, Lisa Gorewit-Decker</p>
                 </div>
             </Container>
         </footer>
