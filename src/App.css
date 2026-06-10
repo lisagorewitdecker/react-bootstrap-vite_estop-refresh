@@ -1,14 +1,1 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
-
-.btn-estop {
-    background-color: #b22222; /* Example red from your branding */
-    color: white;
-    border-radius: 50px;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.btn-estop:hover {
-    background-color: #8b0000; /* Darker shade on hover */
-}

@@ -7,37 +7,36 @@ import Testimonials from './pages/Testimonials';
 import Schedule from './pages/Schedule';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import BlogPost from './components/BlogPost';
+import BlogPage from './pages/BlogPage';
+import BlogPostDetail from './pages/BlogPostDetail';
 import NotFound from './pages/NotFound';
-
+import NavBar from './components/NavBar';
 import CookieBanner from "./components/CookieBanner";
-import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsService from './pages/TermsService';
 import Sitemap from './pages/Sitemap';
 import ScrollToTop from "react-scroll-to-top";
+import DMVCourses from './pages/DMVCourses';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import "./types";
-
 const App: React.FC = () => {
     return (
-        <div className="d-flex flex-column min-vh-100">
-            <NavigationBar/>
+        <>
+            <NavBar/>
             <main className="flex-grow-1">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/testimonials" element={<Testimonials/>}/>
                     <Route path="/services" element={<Services/>}/>
+                    <Route path="/dmv-courses" element={<DMVCourses/>}/>
                     <Route path="/schedule" element={<Schedule/>}/>
                     <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/blog" element={<Blog/>}/>
-                    <Route path="/blog/:id" element={<BlogPost/>}/>
+                    <Route path="/blog" element={<BlogPage/>}/>
+                    <Route path="/blog/:id" element={<BlogPostDetail/>}/>
                     <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
                     <Route path="/terms-of-service" element={<TermsService/>}/>
                     <Route path="/sitemap" element={<Sitemap/>}/>
@@ -46,8 +45,8 @@ const App: React.FC = () => {
             </main>
             <CookieBanner/>
             <Footer/>
-            <ScrollToTop/>
-            </div>
+            <ScrollToTop smooth top={100}/>
+        </>
     );
 }
 
