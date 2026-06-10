@@ -1,10 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import {Container} from 'react-bootstrap';
+import {Outlet} from 'react-router-dom';
 
-import NavigationBar from '../components/NavigationBar';
+import NavBar from '../components/NavBar';
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
+import ScrollToTop from "react-scroll-to-top";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -14,7 +15,7 @@ import "./index.css";
 const MainLayout: React.FC = () => {
     return (
         <div className="d-flex flex-column min-vh-100">
-            <NavigationBar/>
+            <NavBar/>
             <main className="flex-grow-1">
                 <Container>
                     <Outlet/>
@@ -22,8 +23,9 @@ const MainLayout: React.FC = () => {
             </main>
             <Footer/>
             <CookieBanner/>
+            <ScrollToTop smooth top={100}/>
         </div>
     );
-}; // <--- Added the missing closing brace and semicolon here
+};
 
 export default MainLayout;
