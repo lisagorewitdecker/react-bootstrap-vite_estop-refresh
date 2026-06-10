@@ -1,68 +1,114 @@
-import React, {FC} from 'react';
+// noinspection AnonymousFunctionJS
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import React, {FC} from 'react';
+import {
+    Container,
+    Row,
+    Col
+} from 'react-bootstrap';
 
 const Sitemap: FC = () => {
-    const sections = [
+    const mainPages = [
+        {name: "Home", url: "/"},
+        {name: "About Tony", url: "/about"},
         {
-            title: "Main Pages",
-            links: [
-                { name: "Home", path: "/" },
-                { name: "About Tony", path: "/about" },
-                { name: "Contact & Booking", path: "/contact" },
-            ]
-        },
-        {
-            title: "Services",
-            links: [
-                { name: "Teenager Driving Lessons", path: "/teen-driving" },
-                { name: "Adult & Senior Training", path: "/adult-driving" },
-                { name: "DMV Test Preparation", path: "/dmv-prep" },
-                { name: "Traffic School Info", path: "/traffic-school" },
-            ]
-        },
-        {
-            title: "Legal & Info",
-            links: [
-                { name: "Privacy Policy", path: "/privacy-policy" },
-                { name: "Terms of Service", path: "/terms-of-service" },
-                { name: "Frequently Asked Questions", path: "/faq" },
-            ]
+            name: "Contact & Booking",
+            url: "/contact"
         }
     ];
+    const services = [
+        {
+            name: "All Driving Services",
+            url: "/services"
+        },
+        {
+            name: "Schedule a Lesson",
+            url: "/schedule"
+        },
+        {
+            name: "Read Our Testimonials",
+            url: "/testimonials"
+        },
+        {
+            name: "Driving School Blog",
+            url: "/blog"
+        }
+    ];
+    const legal = [
+        {name: "Privacy Policy", url: "/privacy"},
+        {name: "Terms of Service", url: "/terms"},
+        {name: "Site Map", url: "/sitemap"}
+    ];
     return (
-        <div className="container py-5 my-5">
-            <div className="row">
-                <div className="col-12 text-center mb-5">
-                    <h1 className="display-4 fw-bold mb-4 text-center">Site Map</h1>
-                    <p className="lead text-secondary">Find everything you need at eStop Driving School</p>
-                    <hr className="w-25 mx-auto border-danger border-2" />
-                </div>
+        <main className="min-vh-100 bg-white">
+            <div
+                className="bg-light text-dark py-5 mb-5 w-100 border-bottom">
+                <Container>
+                    <Row
+                        className="justify-content-center text-center">
+                        <Col lg={10}>
+                            <header>
+                                <h1 className="display-4 fw-bold text-uppercase mb-3">Sitemap</h1>
+                                <p className="text-muted lead mb-0">Find
+                                    everything you
+                                    need at eStop
+                                    Driving
+                                    School</p>
+                            </header>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
-            <div className="row g-4">
-                {sections.map((section, index) => (
-                    <div key={index} className="col-md-4">
-                        <div className="card h-100 shadow-sm border-0 bg-light">
-                            <div className="card-body p-4">
-                                <h4 className="card-title fw-bold mb-4">{section.title}</h4>
-                                <ul className="list-unstyled">
-                                    {section.links.map((link, lIndex) => (
-                                        <li key={lIndex} className="mb-3">
-                                            <a href={link.path}
-                                                className="text-decoration-none text-dark hover-danger d-flex align-items-center">
-                                                <i className="bi bi-chevron-right text-danger me-2 small"></i>
-                                                {link.name}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+            <Container className="pb-5">
+                <Row
+                    className="justify-content-center g-4">
+                    <Col md={4} lg={3}>
+                        <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Main
+                            Pages</h3>
+                        <ul className="list-unstyled">
+                            {mainPages.map((link, idx) => (
+                                <li key={idx}
+                                    className="mb-2">
+                                    <a href={link.url}
+                                       className="text-dark text-decoration-none hover-danger">
+                                        <i className="bi bi-chevron-right text-danger me-2"></i>{link.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </Col>
+                    <Col md={4} lg={3}>
+                        <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Services</h3>
+                        <ul className="list-unstyled">
+                            {services.map((link, idx) => (
+                                <li key={idx}
+                                    className="mb-2">
+                                    <a href={link.url}
+                                       className="text-dark text-decoration-none">
+                                        <i className="bi bi-chevron-right text-danger me-2"></i>{link.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </Col>
+                    <Col md={4} lg={3}>
+                        <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Legal
+                            & Info</h3>
+                        <ul className="list-unstyled">
+                            {legal.map((link, idx) => (
+                                <li key={idx}
+                                    className="mb-2">
+                                    <a href={link.url}
+                                       className="text-dark text-decoration-none">
+                                        <i className="bi bi-chevron-right text-danger me-2"></i>{link.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
+        </main>
     );
 };
 export default Sitemap;
