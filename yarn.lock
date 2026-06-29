@@ -418,10 +418,12 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.15.tgz"
   integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
-"@types/react-bootstrap@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@types/react-bootstrap/-/react-bootstrap-1.0.1.tgz"
-  integrity sha512-n68SeFrpOFWiSN2DCpyn17ZwTZzY8+mio8E9oCrl7abHytUz3r7ZYIKPxaETHYQxCi8oxF3NultpMAyBxFIjhg==
+"@types/react-bootstrap@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-1.1.0.tgz#1850f444e27ae2d62e817e672c026313f7d326d0"
+  integrity sha512-n8qsRzcODi1rGmodQQagjSddkvxBRQrU6P/Ec8pUjLuY1cYnYvIAkV4Xp/Ji78t4nhdT7kdMW/MnKEwfrUGasw==
+  dependencies:
+    react-bootstrap "*"
 
 "@types/react-dom@^19.2.3":
   version "19.2.3"
@@ -2002,7 +2004,7 @@ react-aria@3.48.0:
     react-stately "3.46.0"
     use-sync-external-store "^1.6.0"
 
-react-bootstrap@^2.10.10:
+react-bootstrap@*, react-bootstrap@^2.10.10:
   version "2.10.10"
   resolved "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.10.10.tgz"
   integrity sha512-gMckKUqn8aK/vCnfwoBpBVFUGT9SVQxwsYrp9yDHt0arXMamxALerliKBxr1TPbntirK/HGrUAHYbAeQTa9GHQ==
