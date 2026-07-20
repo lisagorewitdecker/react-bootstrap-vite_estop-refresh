@@ -45,5 +45,8 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "author": "Lisa Gorewit-Decker <lgorewit@gmail.com>"
+  "author": "Lisa Gorewit-Decker <lgorewit@gmail.com>",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
 }
