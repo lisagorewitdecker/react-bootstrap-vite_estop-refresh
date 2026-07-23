@@ -43,6 +43,18 @@
     "vite": "^8.1.5",
     "vite-plugin-sitemap": "^0.8.2"
   },
+  "overrides": {
+    "eslint-plugin-react": {
+      "minimatch": {
+        "brace-expansion": "^1.1.16"
+      }
+    },
+    "brace-expansion": "^5.0.7"
+  },
+  "resolutions": {
+    "eslint-plugin-react/**/brace-expansion": "^1.1.16",
+    "brace-expansion": "^5.0.7"
+  },
   "license": "MIT",
   "main": "index.js",
   "author": "Lisa Gorewit-Decker <lgorewit@gmail.com>",

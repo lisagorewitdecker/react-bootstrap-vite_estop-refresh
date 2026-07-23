@@ -3,6 +3,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [react()],
     server: {
-        "port": 8080,
+        cors: {
+            origin: ['http://localhost:8080', 'https://www.estopdrivingschool.com'],
+            methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+            credentials: true
+        }
     }
 });
