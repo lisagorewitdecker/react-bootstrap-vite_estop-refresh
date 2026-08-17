@@ -10,13 +10,13 @@
 # supported CodeQL languages.
 #
 
-name: "CodeQL Advanced"
+name: "CodeQL Advanced Analysis"
 
 on:
   push:
-    branches: [ "development" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "development" ]
+    branches: [ "dev" ]
   schedule:
     - cron: '27 6 * * 5'
 
@@ -58,7 +58,7 @@ jobs:
         # your codebase is analyzed, see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v7
+      uses: actions/checkout@v4
 
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes (`actions/setup-node`
@@ -99,4 +99,4 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
       with:
-        category: "/language:${{matrix.language}}"
+        category: "advanced/language:${{matrix.language}}"
