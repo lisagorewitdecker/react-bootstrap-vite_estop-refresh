@@ -28,7 +28,6 @@ const Home: React.FC = () => {
                     </Link>
                 </Container>
             </div>
-
             {/* --- WELCOME TEXT SECTION --- */}
             <Container className="py-5">
                 <div className="py-4 text-dark text-center">
