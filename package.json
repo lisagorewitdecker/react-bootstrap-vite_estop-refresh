@@ -62,10 +62,5 @@
   "allowScripts": {
     "@swc/core@1.15.47": true,
     "fsevents@2.3.3": true
-  },
-  "pnpm": {
-    "overrides": {
-      "brace-expansion": "^2.0.0"
-    }
   }
 }
