@@ -15,7 +15,7 @@
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "formik": "^2.4.9",
-    "lucide-react": "^1.48.0",
+    "lucide-react": "^1.50.0",
     "react": "^19.3.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.3.0",
