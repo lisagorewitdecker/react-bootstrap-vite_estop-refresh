@@ -4,26 +4,19 @@ import {useNavigate} from 'react-router-dom';
 import {DayCounter} from '../types/daycounter';
 
 const DayCounterCTA: React.FC<DayCounter> = ({ startDateIso, label }) => {
-    const [daysPassed, setDaysPassed] = useState<number | null>(null);
+    const [currentTime, setCurrentTime] = useState<number>(() => Date.now());
     const navigate = useNavigate();
 
     useEffect(() => {
-        const calculateDays = () => {
-            const start = new Date(startDateIso).getTime();
-            const now = new Date().getTime();
-            const diffInMs = now - start;
-            const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
-
-            setDaysPassed(days > 0 ? days : 0);
-        };
-
-        calculateDays();
-
-        const interval = setInterval(calculateDays, 3600000);
+        const interval = setInterval(() => setCurrentTime(Date.now()), 3600000);
         return () => clearInterval(interval);
-    }, [startDateIso]);
+    }, []);
 
-    const displayDays = daysPassed !== null ? `${daysPassed} Day${daysPassed !== 1 ? 's' : ''}` : 'Loading...';
+    const startTime = Date.parse(startDateIso);
+    const daysPassed = Number.isFinite(startTime)
+        ? Math.max(0, Math.floor((currentTime - startTime) / (1000 * 60 * 60 * 24)))
+        : 0;
+    const displayDays = `${daysPassed} Day${daysPassed !== 1 ? 's' : ''}`;
 
     return (
         <div className="d-grid gap-2 d-md-block">

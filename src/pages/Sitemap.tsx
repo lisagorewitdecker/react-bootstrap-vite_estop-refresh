@@ -66,8 +66,8 @@ const Sitemap: FC = () => {
                         <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Main
                             Pages</h3>
                         <ul className="list-unstyled">
-                            {mainPages.map((link, idx) => (
-                                <li key={idx}
+                            {mainPages.map((link) => (
+                                <li key={link.url}
                                     className="mb-2">
                                     <a href={link.url}
                                        className="text-dark text-decoration-none hover-danger">
@@ -80,8 +80,8 @@ const Sitemap: FC = () => {
                     <Col md={4} lg={3}>
                         <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Services</h3>
                         <ul className="list-unstyled">
-                            {services.map((link, idx) => (
-                                <li key={idx}
+                            {services.map((link) => (
+                                <li key={link.url}
                                     className="mb-2">
                                     <a href={link.url}
                                        className="text-dark text-decoration-none">
@@ -95,8 +95,8 @@ const Sitemap: FC = () => {
                         <h3 className="h5 fw-bold text-danger text-uppercase mb-3">Legal
                             & Info</h3>
                         <ul className="list-unstyled">
-                            {legal.map((link, idx) => (
-                                <li key={idx}
+                            {legal.map((link) => (
+                                <li key={link.url}
                                     className="mb-2">
                                     <a href={link.url}
                                        className="text-dark text-decoration-none">
