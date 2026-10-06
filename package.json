@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/eslint-plugin": "^8.71.0",
     "@vitejs/plugin-react": "^6.1.1",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
