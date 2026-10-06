@@ -2,23 +2,18 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Security updates are provided for the current repository version only.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Current version | :white_check_mark: |
+| Older versions  | :x:                |
 
 ## Reporting a Vulnerability
 
-Please report suspected vulnerabilities privately by emailing **security@example.com**
-with the subject line `Security Vulnerability Report`.
-
-If you prefer, you can also open a **GitHub Private Security Advisory** for this
-repository to ensure details are shared only with maintainers during triage.
+Please report suspected vulnerabilities through a
+[GitHub Private Security Advisory](https://github.com/lisagorewitdecker/react-bootstrap-vite_estop-refresh/security/advisories/new).
+Do not disclose unpatched vulnerabilities publicly.
 
 Include the following information in your report:
 - Affected version(s) and environment

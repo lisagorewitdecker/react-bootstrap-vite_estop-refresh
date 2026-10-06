@@ -49,8 +49,8 @@ export const PricingTable: React.FC = () => {
                 </div>
 
                 <div className="row g-4 justify-content-center">
-                    {plans.map((plan, index) => (
-                        <div key={index} className="col-12 col-md-4">
+                    {plans.map((plan) => (
+                        <div key={plan.category} className="col-12 col-md-4">
                             <div
                                 className={`card h-100 border-0 shadow-sm p-4 d-flex flex-column justify-content-between position-relative ${
                                     plan.isFeatured ? 'bg-dark text-white' : 'bg-light text-dark'
@@ -83,8 +83,8 @@ export const PricingTable: React.FC = () => {
                                         </div>
 
                                         <ul className="list-unstyled text-start mb-5" style={{ fontSize: '0.9rem' }}>
-                                            {plan.features.map((feature, i) => (
-                                                <li key={i} className="mb-3 d-flex align-items-center gap-2">
+                                            {plan.features.map((feature) => (
+                                                <li key={feature} className="mb-3 d-flex align-items-center gap-2">
                                                     <CheckCircle2 size={18} style={{ color: '#facc15', flexShrink: 0 }} />
                                                     <span>{feature}</span>
                                                 </li>

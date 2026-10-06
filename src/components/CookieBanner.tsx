@@ -1,19 +1,19 @@
-import React, {
-    FC,
-    useEffect,
-    useState
-} from 'react';
+import React, {FC, useState} from 'react';
 
 const CookieBanner: FC = () => {
-    const [isVisible, setIsVisible] = useState<boolean>(false);
-    useEffect(() => {
-        const consent = localStorage.getItem('estop_cookie_consent');
-        if (!consent) {
-            setIsVisible(true);
+    const [isVisible, setIsVisible] = useState<boolean>(() => {
+        try {
+            return !localStorage.getItem('estop_cookie_consent');
+        } catch {
+            return true;
         }
-    }, []);
+    });
     const handleAccept = (): void => {
-        localStorage.setItem('estop_cookie_consent', 'true');
+        try {
+            localStorage.setItem('estop_cookie_consent', 'true');
+        } catch {
+            // Storage may be unavailable; the banner can still be dismissed.
+        }
         setIsVisible(false);
     };
     if (!isVisible) return null;

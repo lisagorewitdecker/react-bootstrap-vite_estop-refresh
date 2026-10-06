@@ -1,2 +1,15 @@
 allowBuilds:
   '@swc/core': false
+
+minimumReleaseAgeExclude:
+  - '@eslint-react/ast@5.24.7'
+  - '@eslint-react/core@5.24.7'
+  - '@eslint-react/eslint@5.24.7'
+  - '@eslint-react/jsx@5.24.7'
+  - '@eslint-react/shared@5.24.7'
+  - '@eslint-react/var@5.24.7'
+  - eslint-plugin-react-dom@5.24.7
+  - eslint-plugin-react-x@5.24.7
+
+overrides:
+  source-map-js: ^1.2.2

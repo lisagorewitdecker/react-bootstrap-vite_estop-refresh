@@ -2,6 +2,8 @@ import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
     return (
         <footer className="bg-dark text-light pt-5 pb-3 mt-auto">
@@ -66,7 +68,7 @@ const Footer = () => {
                 </Row>
                 <hr className="my-4 border-secondary opacity-25"/>
                 <div className="d-flex align-items-center flex-column text-white small">
-                    <p className="mb-0">© {new Date().getFullYear()} e-Stop Driving School. All rights reserved. Full-Stack Developer, Lisa Gorewit-Decker</p>
+                    <p className="mb-0">© {currentYear} e-Stop Driving School. All rights reserved. Full-Stack Developer, Lisa Gorewit-Decker</p>
                 </div>
             </Container>
         </footer>

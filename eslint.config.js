@@ -1,7 +1,8 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
+import reactDom from "eslint-plugin-react-dom";
+import reactX from "eslint-plugin-react-x";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
@@ -10,7 +11,10 @@ export default defineConfig([
     ...tseslint.configs.recommended,
     {
         files: ["src/**/*.{ts,tsx}"],
-        plugins: { react: pluginReact },
+        extends: [
+            reactX.configs["recommended-typescript"],
+            reactDom.configs.recommended,
+        ],
         languageOptions: {
             globals: {
                 ...globals.browser,
@@ -22,11 +26,6 @@ export default defineConfig([
             }
         },
         settings: { react: { version: "19.0" } },
-        rules: {
-            ...pluginReact.configs.flat.recommended.rules,
-            'react/react-in-jsx-scope': 'off',
-            "react/jsx-uses-react": "off",
-        }
     },
     { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
 ]);
