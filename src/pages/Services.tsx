@@ -105,7 +105,7 @@ const Services: React.FC = () => {
                                 <Card.Body className="text-center d-flex flex-column h-100">
                                     <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">Teenagers</h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ per hour</small>
                                     </div>
                                     <ul className="list-unstyled text-start mb-5 flex-grow-1 px-2">
@@ -137,7 +137,7 @@ const Services: React.FC = () => {
                                 <Card.Body className="text-center d-flex flex-column h-100 pt-4">
                                     <h6 className="text-uppercase fw-bold mb-4 text-warning small tracking-widest">Adults</h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-light opacity-75 fst-italic">/ per hour</small>
                                     </div>
                                     <ul className="list-unstyled text-start mb-5 flex-grow-1 px-2">
@@ -164,7 +164,7 @@ const Services: React.FC = () => {
                                 <Card.Body className="text-center d-flex flex-column h-100">
                                     <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">Seniors</h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ per hour</small>
                                     </div>
                                     <ul className="list-unstyled text-start mb-5 flex-grow-1 px-2">
