@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                     <p className="lead fw-semibold mx-md-5 mb-4">
                         I have trained more than 33,000 teenagers and over 5,000 adults and seniors during my almost
                         four-decade career (of course, they are of legal driving age and status). Basic training and
-                        services are at a flat hourly rate of $125. If you need any additional services, please do not
+                        services are at a flat hourly rate of $150. If you need any additional services, please do not
                         hesitate to contact me for more details.
                     </p>
 
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                                         TEENAGERS
                                     </h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ PER HOUR</small>
                                     </div>
                                     {/* Text is centered inside the card for a uniform look */}
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
                                         ADULTS
                                     </h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-light opacity-75 fst-italic">/ PER HOUR</small>
                                     </div>
                                     <ul className="list-unstyled text-center mb-5 flex-grow-1">
@@ -162,7 +162,7 @@ const Home: React.FC = () => {
                                         SENIORS
                                     </h6>
                                     <div className="mb-4">
-                                        <span className="display-5 fw-bold">$125</span>
+                                        <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ PER HOUR</small>
                                     </div>
                                     <ul className="list-unstyled text-center mb-5 flex-grow-1">
