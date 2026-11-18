@@ -11,11 +11,11 @@ const BlogPostDetail: React.FC = () => {
             <div
                 className="text-center py-5"
             >
-                <h3
+                <h1
                     className="text-danger"
                 >
                     OOPS! ARTICLE NOT FOUND.
-                </h3>
+                </h1>
                 <p
                     className="text-muted"
                 >

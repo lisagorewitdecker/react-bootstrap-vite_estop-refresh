@@ -18,22 +18,17 @@ const CookieBanner: FC = () => {
     };
     if (!isVisible) return null;
     return (
-        <div role='alert'
-             className="fixed-bottom bg-dark text-white shadow-lg border-top border-secondary animate__animated animate__fadeInUp"
-             style={{
-                 backdropFilter: 'blur(10px)',
-                 backgroundColor: 'rgba(33, 37, 41, 0.95)',
-                 zIndex: 2050
-             }}>
+        <aside aria-labelledby="cookie-policy-heading"
+             className="bg-dark text-white shadow-lg border-top border-secondary">
             <div className="container py-3">
                 <div
                     className="row align-items-center">
                     <div
                         className="col-12 col-lg-9 text-center text-lg-start mb-3 mb-lg-0">
-                        <h6 className="mb-1 fw-bold text-uppercase small tracking-wider text-danger">
+                        <h2 id="cookie-policy-heading" className="h6 mb-1 fw-bold text-uppercase small tracking-wider">
                             COOKIE POLICY
-                        </h6>
-                        <p className="mb-0 small text-light opacity-75">
+                        </h2>
+                        <p className="mb-0 small text-light">
                             eStop Driving School
                             uses cookies to
                             optimize our website
@@ -55,6 +50,7 @@ const CookieBanner: FC = () => {
                     <div
                         className="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-end gap-2">
                         <button
+                            type="button"
                             onClick={handleAccept}
                             className="btn btn-danger px-4 py-2 fw-bold text-uppercase rounded-pill transition-all"
                             style={{letterSpacing: '1px'}}>
@@ -63,7 +59,7 @@ const CookieBanner: FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
     );
 };
 

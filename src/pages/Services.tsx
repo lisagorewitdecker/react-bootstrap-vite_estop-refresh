@@ -28,28 +28,28 @@ const Services: React.FC = () => {
                         <div className="mb-3 text-danger text-uppercase">
                             <i className="bi bi-shield-check" style={{fontSize: '1.75rem'}}></i>
                         </div>
-                        <h5 className="fw-bold text-uppercase small tracking-widest mb-2">SAFETY FIRST</h5>
+                        <h2 className="h5 fw-bold text-uppercase small tracking-widest mb-2">SAFETY FIRST</h2>
                         <p className="text-muted small px-2">Dual-Control Vehicles &amp; Certified Instructor.</p>
                     </Col>
                     <Col md={3}>
                         <div className="mb-3 text-danger text-uppercase">
                             <i className="bi bi-geo-alt" style={{fontSize: '1.75rem'}}></i>
                         </div>
-                        <h5 className="fw-bold text-uppercase small tracking-widest mb-2">FREE PICKUP</h5>
+                        <h2 className="h5 fw-bold text-uppercase small tracking-widest mb-2">FREE PICKUP</h2>
                         <p className="text-muted small px-2">We Start and End Your Lesson at Your Doorstep.</p>
                     </Col>
                     <Col md={3}>
                         <div className="mb-3 text-danger text-uppercase">
                             <i className="bi bi-calendar-event" style={{fontSize: '1.75rem'}}></i>
                         </div>
-                        <h5 className="fw-bold text-uppercase small tracking-widest mb-2">FLEXIBLE SCHEDULE</h5>
+                        <h2 className="h5 fw-bold text-uppercase small tracking-widest mb-2">FLEXIBLE SCHEDULE</h2>
                         <p className="text-muted small px-2">7 Days a Week, Including Evenings.</p>
                     </Col>
                     <Col md={3}>
                         <div className="mb-3 text-danger text-uppercase">
                             <i className="bi bi-award" style={{fontSize: '1.75rem'}}></i>
                         </div>
-                        <h5 className="fw-bold text-uppercase small tracking-widest mb-2">LICENSED</h5>
+                        <h2 className="h5 fw-bold text-uppercase small tracking-widest mb-2">LICENSED</h2>
                         <p className="text-muted small px-2">Fully bonded and state-certified school.</p>
                     </Col>
                 </Row>
@@ -95,15 +95,15 @@ const Services: React.FC = () => {
                                 AT ESTOP DRIVING SCHOOL
                             </span>
                         </h2>
-                        <h6 className="text-muted fw-normal">
+                        <p className="text-muted fw-normal">
                             Professional, Valet Driving Instruction Starting at Your Front Door.
-                        </h6>
+                        </p>
                     </div>
                     <Row className="g-4 justify-content-center">
                         <Col md={4}>
                             <Card className="h-100 border-0 shadow-sm p-4 bg-light rounded-5">
                                 <Card.Body className="text-center d-flex flex-column h-100">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">Teenagers</h6>
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-muted small tracking-widest">Teenagers</h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ per hour</small>
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
                                     </span>
                                 </div>
                                 <Card.Body className="text-center d-flex flex-column h-100 pt-4">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-warning small tracking-widest">Adults</h6>
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-warning small tracking-widest">Adults</h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-light opacity-75 fst-italic">/ per hour</small>
@@ -162,7 +162,7 @@ const Services: React.FC = () => {
                         <Col md={4}>
                             <Card className="h-100 border-0 shadow-sm p-4 bg-light rounded-5">
                                 <Card.Body className="text-center d-flex flex-column h-100">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">Seniors</h6>
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-muted small tracking-widest">Seniors</h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ per hour</small>
@@ -180,8 +180,7 @@ const Services: React.FC = () => {
                                     </ul>
                                     <Link
                                         to="/schedule"
-                                        className="rounded-pill py-3 fw-bold text-uppercase text-dark mt-auto shadow-sm btn btn-warning"
-                                        style={{backgroundColor: '#dc3445'}}>
+                                        className="rounded-pill py-3 fw-bold text-uppercase text-white mt-auto shadow-sm btn btn-danger">
                                         BOOK SENIORS
                                     </Link>
                                 </Card.Body>
@@ -192,7 +191,7 @@ const Services: React.FC = () => {
             </Container>
             <div className="bg-light py-5 mt-4">
                 <Container className="text-center py-3">
-                    <h3 className="fw-bold mb-3">Still Have Questions?</h3>
+                    <h2 className="h3 fw-bold mb-3">Still Have Questions?</h2>
                     <p className="text-muted mb-4 mx-auto" style={{maxWidth: '500px'}}>
                         Our team is always here to help you find the perfect behind-the-wheel instruction package for your specific needs.
                     </p>

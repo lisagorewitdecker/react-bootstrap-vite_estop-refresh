@@ -10,11 +10,11 @@ const Footer = () => {
             <Container>
                 <Row className="gy-4">
                     <Col lg={4}>
-                        <h5 className="text-danger fw-bold mb-3">
+                        <p className="h5 text-danger fw-bold mb-3">
                             <Link to="/" className="text-decoration-none">
                                 <span className="text-white">ESTOP</span> <span className="text-danger">DRIVING SCHOOL</span>
                             </Link>
-                        </h5>
+                        </p>
                         <p className="text-white-50">
                             Providing Top-Tier Driver Education For Over 43+ Years.
                             <wbr/>
@@ -22,7 +22,7 @@ const Footer = () => {
                         </p>
                     </Col>
                     <Col lg={2}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>QUICK LINKS</h6>
+                        <h2 className="h6 fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>QUICK LINKS</h2>
                         <ul className="list-unstyled d-flex flex-column gap-2">
                             <li>
                                 <Link to="/privacy-policy" className="text-white text-decoration-none">
@@ -42,7 +42,7 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col lg={4}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>CONTACT US</h6>
+                        <h2 className="h6 fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>CONTACT US</h2>
                         <ul className="list-unstyled text-white d-flex flex-column gap-2">
                             <li><i className="bi bi-geo-alt me-2 text-white"></i>SUITE N, 7075 REDWOOD BLVD.</li>
                             <li>NOVATO, CA 94945</li>
@@ -58,7 +58,7 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col lg={2}>
-                        <h6 className="fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>HOURS</h6>
+                        <h2 className="h6 fw-bold mb-3 text-white" style={{fontSize: '1.1em'}}>HOURS</h2>
                         <ul className="list-unstyled text-white d-flex flex-column gap-1">
                             <li>MONDAY — SATURDAY:</li>
                             <li>8:00 AM — 7:00 PM</li>

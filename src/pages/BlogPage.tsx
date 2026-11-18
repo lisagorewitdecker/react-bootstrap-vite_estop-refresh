@@ -17,7 +17,7 @@ const BlogPage: React.FC = () => {
         ? blogPosts
         : blogPosts.filter(post => post.category === selectedCategory);
     return (
-        <main className="min-vh-100 bg-white">
+        <div className="min-vh-100 bg-white">
             <div className="bg-light text-dark py-5 mb-5 w-100 border-bottom">
                 <Container>
                     <Row className="justify-content-center text-center">
@@ -59,10 +59,12 @@ const BlogPage: React.FC = () => {
                                 </div>
                             </div>
                         )}
-                        <div className="d-flex flex-wrap gap-2 justify-content-center mb-5">
+                        <div role="group" aria-label="Filter articles by category" className="d-flex flex-wrap gap-2 justify-content-center mb-5">
                             {categories.map(category => (
                                 <button
                                     key={category}
+                                    type="button"
+                                    aria-pressed={selectedCategory === category}
                                     onClick={() => setSelectedCategory(category)}
                                     className={`btn btn-sm px-4 rounded-pill ${selectedCategory === category ? 'btn-dark' : 'btn-outline-secondary'}`}
                                 >
@@ -70,9 +72,12 @@ const BlogPage: React.FC = () => {
                                 </button>
                             ))}
                         </div>
-                        <h3 className="mb-4 fw-semibold text-uppercase tracking-wide">
+                        <h2 className="h3 mb-4 fw-semibold text-uppercase tracking-wide">
                             {selectedCategory} <span className="text-danger">Articles</span>
-                        </h3>
+                        </h2>
+                        <p className="visually-hidden" role="status">
+                            {filteredPosts.length} {selectedCategory === 'All' ? '' : selectedCategory} articles shown
+                        </p>
                         <div className="row g-4">
                             {filteredPosts.map((post: BlogPost) => (
                                 <div key={post.id} className="col-md-6 col-lg-4">
@@ -80,11 +85,11 @@ const BlogPage: React.FC = () => {
                                         <img src={post.image} className="card-img-top" alt={post.title} style={{ height: '200px', objectFit: 'cover' }} />
                                         <div className="card-body d-flex flex-column">
                                             <span className="badge bg-secondary align-self-start mb-2">{post.category}</span>
-                                            <h5 className="card-title fw-bold">{post.title}</h5>
+                                            <h3 className="h5 card-title fw-bold">{post.title}</h3>
                                             <p className="card-text text-muted flex-grow-1">{post.summary}</p>
                                             <div className="d-flex justify-content-between align-items-center mt-3">
                                                 <small className="text-muted">{post.date}</small>
-                                                <Link to={`/blog/${post.id}`} className="btn btn-sm btn-outline-danger fw-bold">Read More</Link>
+                                                <Link to={`/blog/${post.id}`} aria-label={`Read more: ${post.title}`} className="btn btn-sm btn-outline-danger fw-bold">Read More</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -94,7 +99,7 @@ const BlogPage: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
-        </main>
+        </div>
     );
 };
 

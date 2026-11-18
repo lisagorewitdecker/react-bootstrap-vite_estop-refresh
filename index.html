@@ -7,6 +7,13 @@
     <title> eStop Driving School </title>
 </head>
      <body>
+     <!-- Netlify detects this form at deploy time for the React contact form. -->
+     <form name="contact" method="POST" data-netlify="true" hidden>
+         <input type="hidden" name="form-name" value="contact" />
+         <input type="text" name="fullName" />
+         <input type="tel" name="phone" />
+         <textarea name="message"></textarea>
+     </form>
      <div id="root"></div>
 <script type="module" src="/src/main.tsx" ></script>
 </body>
