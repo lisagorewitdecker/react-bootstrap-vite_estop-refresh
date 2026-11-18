@@ -22,7 +22,7 @@ const About: React.FC = () => {
             </div>
             <div className="bg-white text-dark">
                 <Container className="py-5">
-                    <Row className="g-5 align-items-center">
+                    <Row className="gx-4 gy-5 gx-lg-5 align-items-center">
                         <Col lg={6}>
                             <h2 className="h3 fw-bold text-danger text-uppercase mb-4">
                                 EXPERT DRIVING INSTRUCTION IN THE NORTH BAY, SINCE 1983
@@ -40,9 +40,9 @@ const About: React.FC = () => {
                                 </p>
                             </div>
                             <div className="p-4 rounded-4 shadow-sm text-white mb-4 mb-lg-0" style={{backgroundColor: '#222d3b'}}>
-                                <h6 className="text-warning fw-bold text-uppercase tracking-widest mb-2 small">
+                                <h3 className="h6 text-warning fw-bold text-uppercase tracking-widest mb-2 small">
                                     OUR PROMISE
-                                </h6>
+                                </h3>
                                 <p className="fst-italic mb-2 opacity-90">
                                     &ldquo;Whether you are an incredibly nervous beginner or an experienced motorist looking for an official
                                     DMV safety evaluation, we provide door-to-door, valet-style service 7 days a week to ensure you are road-ready and
@@ -61,9 +61,9 @@ const About: React.FC = () => {
                                 />
                             </div>
                             <div className="p-4 bg-light rounded-4 shadow-sm border">
-                                <h5 className="fw-bold text-dark mb-3 text-uppercase border-bottom pb-2 tracking-wide">
+                                <h2 className="h5 fw-bold text-dark mb-3 text-uppercase border-bottom pb-2 tracking-wide">
                                     AWARDS AND RECOGNITION
-                                </h5>
+                                </h2>
                                 <ul className="list-unstyled mb-0">
                                     <li className="mb-2 d-flex align-items-center">
                                         <i className="bi bi-check-circle-fill text-danger me-2 fs-5"></i>

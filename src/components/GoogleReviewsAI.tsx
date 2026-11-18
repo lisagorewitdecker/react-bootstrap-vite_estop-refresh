@@ -54,7 +54,7 @@ export default function GoogleReviewsAI({
 						TRUSTED BY MARIN & SONOMA COUNTY, SAN FRANCISCO & BAY AREA DRIVERS
 					</h2>
 					<div style={styles.ratingRow}>
-            <span style={styles.stars} aria-label={`${rating} out of 5 stars`}>
+            <span role="img" style={{...styles.stars, color: '#925000'}} aria-label={`${rating} out of 5 stars`}>
               ★★★★★
             </span>
 						<strong style={styles.score}>{rating}</strong>
@@ -98,7 +98,7 @@ export default function GoogleReviewsAI({
 				{reviews.map((review) => (
 					<article key={review.id} style={styles.card}>
 						<div style={styles.cardTop}>
-              <span style={styles.stars} aria-label={`${review.rating} stars`}>
+              <span role="img" style={styles.stars} aria-label={`${review.rating} out of 5 stars`}>
                 {'★'.repeat(review.rating)}
               </span>
 							<span style={styles.googleBadge}>Google</span>
@@ -145,6 +145,7 @@ const styles: Record<string, React.CSSProperties> = {
 	},
 	ratingRow: {
 		display: 'flex',
+		flexWrap: 'wrap',
 		alignItems: 'center',
 		gap: '8px',
 		fontSize: '15px',
@@ -156,11 +157,11 @@ const styles: Record<string, React.CSSProperties> = {
 		letterSpacing: '1px',
 	},
 	score: {
-		color: '#f9fafb',
+		color: '#212529',
 		fontSize: '16px',
 	},
 	count: {
-		color: '#9ca3af',
+		color: '#4b5563',
 	},
 	ctaButton: {
 		backgroundColor: '#dc2626', // eStop Brand Red
@@ -190,9 +191,7 @@ const styles: Record<string, React.CSSProperties> = {
 	aiTitle: {
 		fontWeight: 700,
 		fontSize: '14px',
-		background: '-webkit-linear-gradient(45deg, #3b82f6, #8b5cf6)',
-		WebkitBackgroundClip: 'text',
-		WebkitTextFillColor: 'transparent',
+		color: '#4338ca',
 	},
 	aiText: {
 		margin: 0,
@@ -202,7 +201,7 @@ const styles: Record<string, React.CSSProperties> = {
 	},
 	grid: {
 		display: 'grid',
-		gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+		gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
 		gap: '20px',
 	},
 	card: {
@@ -224,7 +223,7 @@ const styles: Record<string, React.CSSProperties> = {
 	googleBadge: {
 		fontSize: '12px',
 		fontWeight: 600,
-		color: '#9ca3af',
+		color: '#d1d5db',
 		backgroundColor: 'rgba(255, 255, 255, 0.1)',
 		padding: '3px 8px',
 		borderRadius: '4px',
@@ -243,6 +242,4 @@ const styles: Record<string, React.CSSProperties> = {
 		textAlign: 'right',
 	},
 };
-
-
 

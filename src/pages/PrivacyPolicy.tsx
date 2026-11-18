@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 const PrivacyPolicy: FC = () => {
     const lastUpdated: string = "May 2026";
     return (
-        <main>
+        <div>
             {/* --- Full-Width Header Block --- */}
             <div className="bg-light text-dark py-5 mb-5 w-100 border-bottom">
                 <div className="container">
@@ -57,7 +57,7 @@ const PrivacyPolicy: FC = () => {
                     </article>
                 </div>
             </div>
-        </main>
+        </div>
     );
 };
 

@@ -27,8 +27,15 @@ export const Schedule: React.FC = () => {
                                 Book Your Behind-The-Wheel Training
                             </h2>
                             <ScheduleIframe />
+                            <p className="mt-3">
+                                If the calendar is difficult to use,{' '}
+                                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2ZCzKMpxsDgy3QIYZTfsvvJUdvRk-jvBV0w8lJruHsQC7XKkoXjSkAI2Tti5absT-wnaXc05Zy">
+                                    open the booking calendar directly
+                                </a>{' '}
+                                or call <a href="tel:+14158977002">415-897-7002</a> for help booking.
+                            </p>
                             <div className="text-center py-3">
-                                <h4 className="fw-bold mb-3 text-uppercase">Have Questions Before Booking?</h4>
+                                <h2 className="h4 fw-bold mb-3 text-uppercase">Have Questions Before Booking?</h2>
                                 <p className="text-muted mb-4">
                                     If you need alternative accommodations or have custom request needs, feel free to reach out.
                                 </p>

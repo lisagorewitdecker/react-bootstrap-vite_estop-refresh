@@ -18,18 +18,18 @@ const DMVCourses: React.FC = () => {
                 <div className="bg-white py-5 text-dark">
                     <Container>
                         <div className="text-center mb-5">
-                            <h5 className="display-5 fw-bold mb-3">
+                            <h2 className="display-5 fw-bold mb-3">
                               OFFICIAL DMV APPROVED SERVICES
-                            </h5>
+                            </h2>
                         </div>
 
                         {/* Added justify-content-center here to center the columns */}
-                        <div className="row g-5 justify-content-center">
+                        <div className="row gx-4 gy-5 gx-lg-5 justify-content-center">
                             {/* COLUMN 1: DRIVERS EDUCATION */}
                             <div className="col-md-4 text-center">
-                                <h4 className="text-uppercase fw-bold mb-3 text-dark">
+                                <h3 className="h4 text-uppercase fw-bold mb-3 text-dark">
                                     DRIVERS EDUCATION
-                                </h4>
+                                </h3>
                                 <p className="text-muted small mb-4">
                                     Earn your official certificate of completion with our comprehensive, self-paced California DMV licensed courses built for student flexibility.
                                 </p>
@@ -51,9 +51,9 @@ const DMVCourses: React.FC = () => {
 
                             {/* COLUMN 2: TRAFFIC SCHOOL */}
                             <div className="col-md-4 text-center">
-                                <h4 className="text-uppercase fw-bold mb-3 text-dark">
+                                <h3 className="h4 text-uppercase fw-bold mb-3 text-dark">
                                     TRAFFIC SCHOOL
-                                </h4>
+                                </h3>
                                 <p className="text-muted small mb-4">
                                     Easily handle state-court and California DMV requirements. Access your interactive, state-licensed courses online 24/7 on any desktop or mobile device.
                                 </p>
@@ -75,9 +75,9 @@ const DMVCourses: React.FC = () => {
 
                             {/* COLUMN 3: STUDY GUIDE */}
                             <div className="col-md-4 text-center">
-                                <h4 className="text-uppercase fw-bold mb-3 text-dark">
+                                <h3 className="h4 text-uppercase fw-bold mb-3 text-dark">
                                     350 Q&A STUDY GUIDE
-                                </h4>
+                                </h3>
                                 <p className="text-muted small mb-4">
                                     Ace your official DMV written permit exam on the very first try. Master real exam concepts with our specialized study guidelines and test prep frameworks.
                                 </p>

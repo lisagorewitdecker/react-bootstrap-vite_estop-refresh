@@ -72,9 +72,9 @@ const Home: React.FC = () => {
                                 E-STOP DRIVING SCHOOL
                             </span>
                         </h2>
-                        <h6 className="text-muted">
+                        <p className="text-muted">
                             Professional, Valet Driving Instruction Starting at Your Front Door.
-                        </h6>
+                        </p>
                     </div>
 
                     {/* justify-content-center keeps the 3 columns perfectly centered */}
@@ -84,9 +84,9 @@ const Home: React.FC = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="h-100 border-0 shadow-sm p-4 bg-light rounded-5 card">
                                 <div className="text-center d-flex flex-column card-body px-xl-4">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-muted small tracking-widest">
                                         TEENAGERS
-                                    </h6>
+                                    </h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ PER HOUR</small>
@@ -124,9 +124,9 @@ const Home: React.FC = () => {
                                     </span>
                                 </div>
                                 <div className="text-center d-flex flex-column pt-4 card-body px-xl-4">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-warning small tracking-widest">
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-warning small tracking-widest">
                                         ADULTS
-                                    </h6>
+                                    </h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-light opacity-75 fst-italic">/ PER HOUR</small>
@@ -158,9 +158,9 @@ const Home: React.FC = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="h-100 border-0 shadow-sm p-4 bg-light rounded-5 card">
                                 <div className="text-center d-flex flex-column card-body px-xl-4">
-                                    <h6 className="text-uppercase fw-bold mb-4 text-muted small tracking-widest">
+                                    <h3 className="h6 text-uppercase fw-bold mb-4 text-muted small tracking-widest">
                                         SENIORS
-                                    </h6>
+                                    </h3>
                                     <div className="mb-4">
                                         <span className="display-5 fw-bold">$150</span>
                                         <small className="d-block text-muted fst-italic">/ PER HOUR</small>
@@ -192,13 +192,13 @@ const Home: React.FC = () => {
 
                     {/* --- CONTACT SUPPORT --- */}
                     <div className="text-center pt-5 mt-4">
-                        <h3 className="fw-bold mb-4">
+                        <h2 className="h3 fw-bold mb-4">
                             HAVE ANY ADDITIONAL QUESTIONS?
-                        </h3>
+                        </h2>
                         <p className="text-muted mb-5">
                             Our Team Is Always Here To Assist You In Finding The Perfect Driving Instruction Package/s For Your Needs!
                         </p>
-                        <Link to="/schedule" className="px-5 py-3 rounded-pill fw-bold text-uppercase btn btn-danger">
+                        <Link to="/contact" className="px-5 py-3 rounded-pill fw-bold text-uppercase btn btn-danger">
                             CONTACT SUPPORT
                         </Link>
                     </div>

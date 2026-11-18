@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import {Navbar, Nav, Container} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 const NavBar: FC = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -10,6 +10,7 @@ const NavBar: FC = () => {
             variant="dark"
             expand="lg"
             sticky="top"
+            aria-label="Main navigation"
             expanded={expanded}
             onToggle={(isOpen) => setExpanded(isOpen)}
         >
@@ -26,6 +27,7 @@ const NavBar: FC = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="basic-navbar-nav"
+                    aria-expanded={expanded}
                 />
                 <Navbar.Collapse
                     id="basic-navbar-nav"
@@ -35,34 +37,35 @@ const NavBar: FC = () => {
                         onClick={() => setExpanded(false)}
                     >
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/"
+                            end
                         >
                             HOME
                         </Nav.Link>
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/about">ABOUT</Nav.Link>
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/services"
                         >
                             SERVICES
                         </Nav.Link>
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/dmv-courses"
                         >
                             DMV COURSES
                         </Nav.Link>
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/schedule"
                         >
                             SCHEDULE
                         </Nav.Link>
                         <Nav.Link
-                            as={Link}
+                            as={NavLink}
                             to="/blog"
                         >
                             BLOG

@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 export const TermsService: FC = () => {
     return (
-        <main>
+        <div>
             {/* --- Full-Width Header Banner --- */}
             <div className="bg-light text-dark py-5 mb-5 w-100 border-bottom">
                 <div className="container">
@@ -25,7 +25,7 @@ export const TermsService: FC = () => {
                     <article className="col-lg-10">
 
                         <section className="mb-4">
-                            <h4 className="fw-bold text-danger mb-2">1. Lesson Requirements</h4>
+                            <h2 className="h4 fw-bold text-danger mb-2">1. Lesson Requirements</h2>
                             <p className="text-dark">
                                 All students must possess a valid California Learner&rsquo;s Permit or Driver&rsquo;s License during every behind-the-wheel lesson.
                                 Failure to produce a valid permit or license will result in a cancelled lesson and a full charge.
@@ -33,7 +33,7 @@ export const TermsService: FC = () => {
                         </section>
 
                         <section className="mb-4">
-                            <h4 className="fw-bold text-danger mb-2">2. Pricing & Payments</h4>
+                            <h2 className="h4 fw-bold text-danger mb-2">2. Pricing & Payments</h2>
                             <p className="text-dark">
                                 Lessons are charged at a flat rate of <strong>$150 per hour</strong>. Payment is due at the time of service unless otherwise
                                 arranged directly with eStop Driving School.
@@ -41,7 +41,7 @@ export const TermsService: FC = () => {
                         </section>
 
                         <section className="mb-4">
-                            <h4 className="fw-bold text-danger text-uppercase mb-2">3. Cancellation Policy</h4>
+                            <h2 className="h4 fw-bold text-danger text-uppercase mb-2">3. Cancellation Policy</h2>
                             <p className="text-dark">
                                 We require at least <strong>24 hours notice</strong> for cancellations. Late cancellations or &ldquo;no-shows&rdquo; at the agreed
                                 valet pick-up location will be subject to a standard cancellation fee.
@@ -49,7 +49,7 @@ export const TermsService: FC = () => {
                         </section>
 
                         <section className="mb-4">
-                            <h4 className="fw-bold text-danger text-uppercase mb-2">4. Safety & Liability</h4>
+                            <h2 className="h4 fw-bold text-danger text-uppercase mb-2">4. Safety & Liability</h2>
                             <p className="text-dark">
                                 Tony (Teshome) and eStop Driving School prioritize student safety. We reserve the right to terminate a lesson immediately if a
                                 student is deemed to be under the influence of any substance or acting in a reckless manner that endangers themselves, the public,
@@ -67,7 +67,7 @@ export const TermsService: FC = () => {
                     </article>
                 </div>
             </div>
-        </main>
+        </div>
     );
 };
 

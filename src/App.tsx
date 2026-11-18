@@ -18,6 +18,7 @@ import TermsService from './pages/TermsService';
 import Sitemap from './pages/Sitemap';
 import ScrollToTop from "react-scroll-to-top";
 import DMVCourses from './pages/DMVCourses';
+import RouteAccessibility from './components/RouteAccessibility';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -25,8 +26,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const App: React.FC = () => {
     return (
         <>
+            <a className="skip-link" href="#main-content">Skip to main content</a>
+            <RouteAccessibility/>
             <NavBar/>
-            <main className="flex-grow-1">
+            <main id="main-content" tabIndex={-1} className="flex-grow-1">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
@@ -45,7 +48,10 @@ const App: React.FC = () => {
             </main>
             <CookieBanner/>
             <Footer/>
-            <ScrollToTop smooth top={100}/>
+            <ScrollToTop top={100} aria-label="Back to top" onClick={() => {
+                document.getElementById('main-content')?.focus({preventScroll: true});
+                window.scrollTo({top: 0, behavior: 'instant'});
+            }}/>
         </>
     );
 }
