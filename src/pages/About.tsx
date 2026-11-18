@@ -2,6 +2,7 @@ import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import tonyInCar from '../assets/tony-in-car.jpg';
+import GoogleReviewsAI from '../components/GoogleReviewsAI.tsx';
 
 const About: React.FC = () => {
     return (
@@ -61,7 +62,7 @@ const About: React.FC = () => {
                             </div>
                             <div className="p-4 bg-light rounded-4 shadow-sm border">
                                 <h5 className="fw-bold text-dark mb-3 text-uppercase border-bottom pb-2 tracking-wide">
-                                    AWARDS &amp; RECOGNITION
+                                    AWARDS AND RECOGNITION
                                 </h5>
                                 <ul className="list-unstyled mb-0">
                                     <li className="mb-2 d-flex align-items-center">
@@ -84,6 +85,11 @@ const About: React.FC = () => {
                             </div>
                         </Col>
                     </Row>
+                </Container>
+                   <Container>
+                       <div>
+                       <GoogleReviewsAI />
+                       </div>
                 </Container>
             </div>
         </>
