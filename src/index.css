@@ -37,7 +37,7 @@ a.fw-bold.text-uppercase.rounded-pill.danger-button.btn.btn-danger.border-0{
     background-color: #dc3445 !important;
 }
 a.text-decoration-none.text-info.fw-semibold.ms-1 {
-    color: #ff8791 !important;
+    color: #dc3445 !important;
     font-weight: 700 !important;
     font-family: "Overpass", sans-serif;
 }
@@ -622,12 +622,7 @@ html {
 :root .text-danger,
 :root a.text-secondary,
 :root a.text-info {
-    color: #a31f2d !important;
-}
-
-:root :is(.bg-dark, .navbar-dark) .text-danger,
-:root .bg-dark a.text-info {
-    color: #ff8791 !important;
+    color: #dc3445 !important;
 }
 
 :root .bg-dark p.text-secondary {
@@ -639,10 +634,10 @@ html {
 }
 
 .bg-light .btn-outline-danger {
-    --bs-btn-color: #a31f2d;
-    --bs-btn-border-color: #a31f2d;
-    --bs-btn-hover-bg: #a31f2d;
-    --bs-btn-hover-border-color: #a31f2d;
+    --bs-btn-color: #dc3445;
+    --bs-btn-border-color: #dc3445;
+    --bs-btn-hover-bg: #dc3445;
+    --bs-btn-hover-border-color: #dc3445;
 }
 
 :root .navbar-dark .navbar-brand {

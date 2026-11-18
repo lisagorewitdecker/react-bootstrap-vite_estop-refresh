@@ -25,7 +25,7 @@ const CookieBanner: FC = () => {
                     className="row align-items-center">
                     <div
                         className="col-12 col-lg-9 text-center text-lg-start mb-3 mb-lg-0">
-                        <h2 id="cookie-policy-heading" className="h6 mb-1 fw-bold text-uppercase small tracking-wider">
+                        <h2 id="cookie-policy-heading" className="h6 mb-1 fw-bold text-uppercase small tracking-wider text-danger">
                             COOKIE POLICY
                         </h2>
                         <p className="mb-0 small text-light">
