@@ -180,7 +180,8 @@ const Services: React.FC = () => {
                                     </ul>
                                     <Link
                                         to="/schedule"
-                                        className="rounded-pill py-3 fw-bold text-uppercase text-white mt-auto shadow-sm btn btn-danger">
+                                        className="rounded-pill py-3 fw-bold text-uppercase text-white mt-auto shadow-sm btn btn-danger"
+                                        style={{backgroundColor: '#dc3445'}}>
                                         BOOK SENIORS
                                     </Link>
                                 </Card.Body>
