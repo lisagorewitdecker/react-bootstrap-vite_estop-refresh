@@ -26,10 +26,6 @@ const Sitemap: FC = () => {
             url: "/schedule"
         },
         {
-            name: "Read Our Testimonials",
-            url: "/testimonials"
-        },
-        {
             name: "Driving School Blog",
             url: "/blog"
         }
