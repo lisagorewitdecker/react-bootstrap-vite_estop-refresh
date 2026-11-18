@@ -35,7 +35,7 @@ export const TermsService: FC = () => {
                         <section className="mb-4">
                             <h4 className="fw-bold text-danger mb-2">2. Pricing & Payments</h4>
                             <p className="text-dark">
-                                Lessons are charged at a flat rate of <strong>$125 per hour</strong>. Payment is due at the time of service unless otherwise
+                                Lessons are charged at a flat rate of <strong>$150 per hour</strong>. Payment is due at the time of service unless otherwise
                                 arranged directly with eStop Driving School.
                             </p>
                         </section>
